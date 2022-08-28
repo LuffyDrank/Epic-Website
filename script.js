@@ -1,36 +1,57 @@
 function showImg1() {
     document.getElementById("img1").style.display = "block";
-    document.getElementById("img2").style.display = "none";
-}
-function showImg2() {
-    document.getElementById("img1").style.display = "none";
-    document.getElementById("img2").style.display = "block";
+    document.querySelector("video").play();
 }
 
 function hiddeImg() {
     document.getElementById("img1").style.display = "none";
-    document.getElementById("img2").style.display = "none";
+    document.querySelector("video").pause();
 }
 
 const select = document.querySelector("select");
 const body = document.querySelector("body");
 
-select.addEventListener('change', setWeather);
+select.addEventListener('change', setBg);
 
-function setWeather() {
+function setBg() {
    const choice = select.value;
-if (choice === "red") {
- document.querySelector("body").style.backgroundColor="red";
-}
-if (choice === "white") {
-   document.querySelector("body").style.backgroundColor="white";
-  }
-if (choice === "black") {
-   document.querySelector("body").style.backgroundColor="black";
-  }
-
+   if (choice === "red") {
+      document.querySelector("body").style.backgroundColor="red";
+      }
+      else  if (choice === "white") {
+         document.querySelector("body").style.backgroundColor="white";
+         }
+      else  if (choice === "black") {
+         document.querySelector("body").style.backgroundColor="black";
+         }
+      else  if (choice === "green") {
+         document.querySelector("body").style.backgroundColor="green";
+         }
+      else  if (choice === "blue") {
+         document.querySelector("body").style.backgroundColor="blue";
+         }
+      else  if (choice === "yellow") {
+         document.querySelector("body").style.backgroundColor="yellow";
+         }
 }
 /*
+const randomNumber = Math.floor(Math.random() * 10);
+
+console.log(randomNumber);
+
+if (randomNumber > 5) {
+   const choice = "red";
+   if (choice === "red") {
+      document.querySelector("body").style.backgroundColor="red";
+      }
+      else  if (choice === "white") {
+         document.querySelector("body").style.backgroundColor="white";
+         }
+      else  if (choice === "black") {
+         document.querySelector("body").style.backgroundColor="black";
+         }
+}
+
 let userName = prompt("userName");
 
 if (userName === "Admin") {

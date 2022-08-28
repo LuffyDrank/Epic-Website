@@ -1,61 +1,55 @@
 body {
    font-family: monospace; 
    background-color: black; 
-   line-height: 0px;
 }
-.content {
-   display:flex;
-   justify-content: center;
-   align-items: center;
-   flex-direction: column;
+.content-top {
+  display: flex;
+  justify-content: center;
 }
-.content-bottom-text button {
-   margin: 10px;
-   padding: 5px;
-   background-color: white;
-   border: solid transparent 2px;
+#videoThingie {
+  padding: 0px;
+  border: solid transparent 2px;
 }
-.content-bottom-text button:hover {
-   border-bottom: solid white 2px;
-}
-.content * {
-   text-align: center;
+.buttons button {
+  opacity: .5;
+  margin: 10px;
+  padding: 5px;
+  border: solid transparent 2px;
 }
 
-img {
-   display:none;
-   width: 40vw;
-   max-height: 70vh;
+.buttons {
+  display: flex;
+  justify-content: center;
 }
+.buttons button:hover {
+   border-bottom: solid white 2px;
+}
+video {
+  margin: auto;
+  display:none;
+  height: 70vh;
+}
+
 #button1 {
    font-size: 50px; 
    position: relative; 
-   background-color: black; 
+   background-color: transparent; 
 }
 #button2 {
    font-size: 50px; 
    position: relative; 
-   background-color: black; 
+   background-color: transparent; 
 }
-#button3 {
-   font-size: 50px; 
-   position: relative; 
-   background-color: black; 
-}
-#button4 {
-   font-size: 50px; 
-   position: relative; 
-   background-color: black; 
-}
-img {
-   margin:0;
-   padding:0;
-   border:0;
-   }
-   H1, button {
-    animation: color-change 4s infinite;
+
+H1, button {
+  animation: color-change 4s infinite;
   }
   
+.bottom {
+  text-align: center;
+  font-size: 15px;
+}
+
   @keyframes color-change {
   0% {
     color: blue;
@@ -91,6 +85,10 @@ img {
     color: pink;
   }
 }
+
+@media only screen and (min-width: 768px) {
+
+} 
 label {
-   color: white;
+  color: white;
 }
