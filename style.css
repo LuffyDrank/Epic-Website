@@ -19,13 +19,15 @@ body {
 
 .buttons {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
 }
 .buttons button:hover {
    border-bottom: solid white 2px;
 }
+
 video {
-  margin: auto;
+  margin-right: auto;
+  margin-left: auto;
   display:none;
   height: 70vh;
 }
@@ -34,11 +36,13 @@ video {
    font-size: 50px; 
    position: relative; 
    background-color: transparent; 
+   align-self: flex-start;
 }
 #button2 {
    font-size: 50px; 
    position: relative; 
    background-color: transparent; 
+   align-self: flex-end;
 }
 
 H1, button {
@@ -87,7 +91,10 @@ H1, button {
 }
 
 @media only screen and (min-width: 768px) {
-
+  video {
+    width: 90vw;
+    height: auto;
+  }
 } 
 label {
   color: white;
